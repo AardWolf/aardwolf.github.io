@@ -7,14 +7,13 @@
   <body>
   <H1>Untapped Cog Authenticator</H1>
   Welcome to the Untappd Cog Authenticator! You should have arrived here because the bot told you to visit a URL at <a href="http://untappd.com">Untappd</a>. After you authenticated Untappd probably sent you here.
-  
+
   You will now respond to the bot with:
-  <blockquote><p>
-  !untappd auth-token <div id="token">XXYYX</div>
-  </p></blockquote>
+  <blockquote><p id="token"></p>
+  </blockquote>
   </body>
-  <script language="JavaScript">
+  <script>
   url = window.location.href
-  document.getElementByID("token").innerHTML = url
+  document.getElementByID("token").innerHTML = "!untappd auth-token " + url
   </script>
 </html>
