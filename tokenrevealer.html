@@ -13,7 +13,9 @@
   </blockquote>
   </body>
   <script>
-  url = window.location.href
-  document.getElementById("token").innerHTML = "!untappd auth-token " + url
+  var parser = document.createElement('a');
+  parser.href = url;
+  token = parser.hash;
+  document.getElementById("token").innerHTML = "!untappd auth-token " + url;
   </script>
 </html>
