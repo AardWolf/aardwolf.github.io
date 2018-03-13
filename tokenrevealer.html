@@ -16,6 +16,7 @@
   var parser = document.createElement('a');
   parser.href = document.URL;
   token =  parser.hash;
-  document.getElementById("token").innerHTML = "!untappd auth-token " + token;
+  var parts = token.split("=")
+  document.getElementById("token").innerHTML = "!untappd auth-token " + parts[1];
   </script>
 </html>
